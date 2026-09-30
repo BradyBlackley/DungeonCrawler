@@ -1,2 +1,2 @@
 # DungeonCrawler
-Passion Project
+Helps the Dungeon Master generate a random scenario 
