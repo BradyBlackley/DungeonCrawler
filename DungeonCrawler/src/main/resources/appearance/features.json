@@ -1,0 +1,70 @@
+[
+  {
+    "id": 1,
+    "description": "distinctive jewelry"
+  },
+  {
+    "id": 2,
+    "description": "flamboyant clothes"
+  },
+  {
+    "id": 3,
+    "description": "outlandish clothes"
+  },
+  {
+    "id": 4,
+    "description": "formal clothes"
+  },
+  {
+    "id": 5,
+    "description": "ragged clothes"
+  },
+  {
+    "id": 6,
+    "description": "an elegant wheelchair"
+  },
+  {
+    "id": 7,
+    "description": "an elegant mobility brace"
+  },
+  {
+    "id": 8,
+    "description": "an elegant cane"
+  },
+  {
+    "id": 9,
+    "description": "a pronounced scar"
+  },
+  {
+    "id": 10,
+    "description": "dark red irises"
+  },
+  {
+    "id": 11,
+    "description": "bright yellow irises"
+  },
+  {
+    "id": 12,
+    "description": "heterochromia"
+  },
+  {
+    "id": 13,
+    "description": "a missing eye"
+  },
+  {
+    "id": 14,
+    "description": "tattoos"
+  },
+  {
+    "id": 15,
+    "description": "piercings"
+  },
+  {
+    "id": 16,
+    "description": "a birthmark"
+  },
+  {
+    "id": 17,
+    "description": "tattoos"
+  }
+]

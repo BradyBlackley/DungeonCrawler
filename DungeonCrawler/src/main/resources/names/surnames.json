@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "description": "Brightsun"
+  },
+  {
+    "id": 2,
+    "description": "Dundragon"
+  },
+  {
+    "id": 3,
+    "description": "Frostbeard"
+  },
+  {
+    "id": 4,
+    "description": "Garrick"
+  },
+  {
+    "id": 5,
+    "description": "Goodbarrel"
+  },
+  {
+    "id": 6,
+    "description": "Greycastle"
+  },
+  {
+    "id": 7,
+    "description": "Ironfist"
+  },
+  {
+    "id": 8,
+    "description": "Jaerin"
+  },
+  {
+    "id": 9,
+    "description": "Merryweather"
+  },
+  {
+    "id": 10,
+    "description": "Redthorn"
+  },
+  {
+    "id": 11,
+    "description": "Stormriver"
+  },
+  {
+    "id": 12,
+    "description": "Wren"
+  }
+]
