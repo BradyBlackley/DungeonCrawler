@@ -53,10 +53,10 @@ public class Creature extends Entity implements NPC {
     public String generateFirstNameByCreatureType() {
         String firstName;
         switch (this.genus) {
-            case BEAST, MONSTROSITY -> firstName = Name.randomGutturalFirstName().getDescription();
-            case DRAGON, UNDEAD -> firstName = Name.randomSinisterFirstName().getDescription();
-            case ELEMENTAL, PLANT -> firstName = Name.randomMonosyllabicFirstName().getDescription();
-            default -> firstName = Name.randomFirstName().getDescription();
+            case BEAST, MONSTROSITY -> firstName = NameGenerator.randomGutturalFirstName().getDescription();
+            case DRAGON, UNDEAD -> firstName = NameGenerator.randomSinisterFirstName().getDescription();
+            case ELEMENTAL, PLANT -> firstName = NameGenerator.randomMonosyllabicFirstName().getDescription();
+            default -> firstName = NameGenerator.randomFirstName().getDescription();
         }
         return firstName;
     }
@@ -64,10 +64,10 @@ public class Creature extends Entity implements NPC {
     public String generateSurnameByCreatureType() {
         String surname;
         switch (this.genus) {
-            case BEAST, MONSTROSITY -> surname = Name.randomGutturalSurname().getDescription();
-            case DRAGON, UNDEAD -> surname = Name.randomSinisterSurname().getDescription();
-            case ELEMENTAL, PLANT -> surname = Name.randomMonosyllabicSurname().getDescription();
-            default -> surname = Name.randomSurname().getDescription();
+            case BEAST, MONSTROSITY -> surname = NameGenerator.randomGutturalSurname().getDescription();
+            case DRAGON, UNDEAD -> surname = NameGenerator.randomSinisterSurname().getDescription();
+            case ELEMENTAL, PLANT -> surname = NameGenerator.randomMonosyllabicSurname().getDescription();
+            default -> surname = NameGenerator.randomSurname().getDescription();
         }
         return surname;
     }

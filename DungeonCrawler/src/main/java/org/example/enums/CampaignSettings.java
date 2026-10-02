@@ -12,11 +12,15 @@ public enum CampaignSettings {
     DARK_SUN("Dark Sun"),
     DRAGONLANCE("Dragonlance"),
     EBERRON("Eberron"),
+    EXANDRIA("Exandria"),
     THE_FORGOTTEN_REALMS("The Forgotten Realms"),
     GREYHAWK("Greyhawk"),
     PLANESCAPE("Planescape"),
     RAVENLOFT("Ravenloft"),
-    SPELLJAMMER("Spelljammer");
+    RAVNICA("Ravnica"),
+    SPELLJAMMER("Spelljammer"),
+    STRIXHAVEN("Strixhaven"),
+    THEROS("Theros");
 
     private final String description;
 

@@ -30,20 +30,10 @@ public class Main {
             synthesizer.speakPlainText("Welcome to Dungeon Crawler.", null);
             System.out.println();
 
-            System.out.println("Describing creatures:");
-            System.out.println();
+            Scenario scenario = Scenario.builder().build();
+            scenario.generateAttributes();
 
-
-            synthesizer.speakPlainText("Describing creatures:", null);
-            int loop = 0;
-            while(loop < 5) {
-                Creature creature = Creature.builder().build();
-                creature.generateAttributes();
-                System.out.println(creature.describe());
-                synthesizer.speakPlainText(
-                        creature.describe(), null);
-                loop++;
-            }
+            synthesizer.speakPlainText(scenario.describe(), null);
 
             System.out.println();
             System.out.println("Thank you for using Dungeon Crawler.");
