@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "description": "Dench"
+  },
+  {
+    "id": 2,
+    "description": "Drog"
+  },
+  {
+    "id": 3,
+    "description": "Dusk"
+  },
+  {
+    "id": 4,
+    "description": "Holg"
+  },
+  {
+    "id": 5,
+    "description": "Horn"
+  },
+  {
+    "id": 6,
+    "description": "Imsh"
+  },
+  {
+    "id": 7,
+    "description": "Jask"
+  },
+  {
+    "id": 8,
+    "description": "Keth"
+  },
+  {
+    "id": 9,
+    "description": "Ku"
+  },
+  {
+    "id": 10,
+    "description": "Kung"
+  },
+  {
+    "id": 11,
+    "description": "Mott"
+  },
+  {
+    "id": 12,
+    "description": "Quaal"
+  }
+]

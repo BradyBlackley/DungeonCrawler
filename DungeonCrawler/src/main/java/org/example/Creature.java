@@ -23,31 +23,53 @@ public class Creature extends Entity implements NPC {
     @Override
     public String describe() {
         StringBuilder sb = new StringBuilder();
-        sb.append("A ")
-                .append(size.getDescription())
+        sb.append(firstName)
                 .append(" ")
-                .append(alignment.getDescription())
+                .append(surname)
+                .append(", a ")
+                .append(size.getDescription())
                 .append(" ")
                 .append(subtype.getDescription())
                 .append(" ")
                 .append("with ")
                 .append(appearance.getDescription())
-                .append(" ")
-                .append("named ")
-                .append(firstName)
-                .append(" ")
-                .append(surname)
+                .append(" that is ")
+                .append(alignment.getDescription())
                 .append(".");
         return sb.toString();
     }
 
     @Override
     public void generateAttributes() {
-        this.firstName = Name.randomFirstName().getDescription();
-        this.surname = Name.randomSurname().getDescription();
         this.size = Size.randomSize();
         this.subtype = CreatureType.randomCreatureType();
         this.alignment = Alignment.randomAlignment();
         this.appearance = Appearance.randomAppearance();
+        this.firstName = generateFirstNameByCreatureType();
+        this.surname = Name.randomSurname().getDescription();
+    }
+
+    public String generateFirstNameByCreatureType() {
+        String firstName;
+        switch (this.subtype) {
+            case BEAST -> firstName = Name.randomFirstName().getDescription();
+            case DRAGON, DRAGON_METALLIC, DRAGON_CHROMATIC -> firstName = Name.randomFirstName().getDescription();
+            case ELEMENTAL -> firstName = Name.randomMonosyllabicFirstName().getDescription();
+            case HUMANOID -> firstName = Name.randomFirstName().getDescription();
+            default -> firstName = Name.randomFirstName().getDescription();
+        }
+        return firstName;
+    }
+
+    public String generateSurnameByCreatureType() {
+        String firstName;
+        switch (this.subtype) {
+            case BEAST -> firstName = Name.randomFirstName().getDescription();
+            case DRAGON, DRAGON_METALLIC, DRAGON_CHROMATIC -> firstName = Name.randomFirstName().getDescription();
+            case ELEMENTAL -> firstName = Name.randomMonosyllabicFirstName().getDescription();
+            case HUMANOID -> firstName = Name.randomFirstName().getDescription();
+            default -> firstName = Name.randomFirstName().getDescription();
+        }
+        return firstName;
     }
 }

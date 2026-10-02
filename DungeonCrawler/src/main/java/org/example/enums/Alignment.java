@@ -19,8 +19,7 @@ public enum Alignment {
     CHAOTIC_GOOD("chaotic-good"),
     CHAOTIC_NEUTRAL("chaotic-neutral"),
     CHAOTIC_EVIL("chaotic-evil"),
-    UNALIGNED("unaligned"),
-    ANY("");
+    UNALIGNED("unaligned");
 
     private final String description;
     private static final Random RAND = new Random();

@@ -15,4 +15,15 @@ dependencies {
 
     testCompileOnly 'org.projectlombok:lombok:1.18.36'
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.36'
+
+    implementation files('libs/cmu_time_awb.jar')
+    implementation files('libs/cmu_us_kal.jar')
+    implementation files('libs/cmudict04.jar')
+    implementation files('libs/cmulex.jar')
+    implementation files('libs/cmutimelex.jar')
+    implementation files('libs/en_us.jar')
+    implementation files('libs/freetts.jar')
+    implementation files('libs/freetts-jsapi10.jar')
+    implementation files('libs/jsapi.jar')
+    implementation files('libs/mbrola.jar')
 }
