@@ -19,6 +19,10 @@ public class Name {
     private static final List<Feature> GUTTURAL_SURNAMES;
     private static final List<Feature> SINISTER_FIRST_NAMES;
     private static final List<Feature> SINISTER_SURNAMES;
+    private static final List<Feature> LYRICAL_FIRST_NAMES;
+    private static final List<Feature> LYRICAL_SURNAMES;
+    private static final List<Feature> WHIMSICAL_FIRST_NAMES;
+    private static final List<Feature> WHIMSICAL_SURNAMES;
 
     static {
         try {
@@ -156,6 +160,74 @@ public class Name {
         } catch (IOException e) {
             throw new RuntimeException("Failed to load sinister surnames", e);
         }
+
+        try {
+            ObjectMapper mapper = new ObjectMapper();
+
+            InputStream in = Name.class.getResourceAsStream("/names/lyrical-first-names.json");
+            if (in == null) {
+                throw new RuntimeException("Resource not found: /names/lyrical-first-names.json");
+            }
+
+            LYRICAL_FIRST_NAMES = mapper.readValue(
+                    in,
+                    new TypeReference<List<Feature>>() {}
+            );
+
+        } catch (IOException e) {
+            throw new RuntimeException("Failed to load lyrical first names", e);
+        }
+
+        try {
+            ObjectMapper mapper = new ObjectMapper();
+
+            InputStream in = Name.class.getResourceAsStream("/names/lyrical-surnames.json");
+            if (in == null) {
+                throw new RuntimeException("Resource not found: /names/lyrical-surnames.json");
+            }
+
+            LYRICAL_SURNAMES = mapper.readValue(
+                    in,
+                    new TypeReference<List<Feature>>() {}
+            );
+
+        } catch (IOException e) {
+            throw new RuntimeException("Failed to load lyrical surnames", e);
+        }
+
+        try {
+            ObjectMapper mapper = new ObjectMapper();
+
+            InputStream in = Name.class.getResourceAsStream("/names/whimsical-first-names.json");
+            if (in == null) {
+                throw new RuntimeException("Resource not found: /names/whimsical-first-names.json");
+            }
+
+            WHIMSICAL_FIRST_NAMES = mapper.readValue(
+                    in,
+                    new TypeReference<List<Feature>>() {}
+            );
+
+        } catch (IOException e) {
+            throw new RuntimeException("Failed to load whimsical first names", e);
+        }
+
+        try {
+            ObjectMapper mapper = new ObjectMapper();
+
+            InputStream in = Name.class.getResourceAsStream("/names/whimsical-surnames.json");
+            if (in == null) {
+                throw new RuntimeException("Resource not found: /names/whimsical-surnames.json");
+            }
+
+            WHIMSICAL_SURNAMES = mapper.readValue(
+                    in,
+                    new TypeReference<List<Feature>>() {}
+            );
+
+        } catch (IOException e) {
+            throw new RuntimeException("Failed to load whimsical surnames", e);
+        }
     }
 
     public static Feature randomFirstName() {
@@ -188,5 +260,21 @@ public class Name {
 
     public static Feature randomSinisterSurname() {
         return SINISTER_SURNAMES.get(RAND.nextInt(SINISTER_SURNAMES.size()));
+    }
+
+    public static Feature randomLyricalFirstName() {
+        return LYRICAL_FIRST_NAMES.get(RAND.nextInt(LYRICAL_FIRST_NAMES.size()));
+    }
+
+    public static Feature randomLyricalSurname() {
+        return LYRICAL_SURNAMES.get(RAND.nextInt(LYRICAL_SURNAMES.size()));
+    }
+
+    public static Feature randomWhimsicalFirstName() {
+        return WHIMSICAL_FIRST_NAMES.get(RAND.nextInt(WHIMSICAL_FIRST_NAMES.size()));
+    }
+
+    public static Feature randomWhimsicalSurname() {
+        return WHIMSICAL_SURNAMES.get(RAND.nextInt(WHIMSICAL_SURNAMES.size()));
     }
 }

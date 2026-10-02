@@ -54,9 +54,8 @@ public class Creature extends Entity implements NPC {
         String firstName;
         switch (this.genus) {
             case BEAST, MONSTROSITY -> firstName = Name.randomGutturalFirstName().getDescription();
-            case DRAGON -> firstName = Name.randomSinisterFirstName().getDescription();
+            case DRAGON, UNDEAD -> firstName = Name.randomSinisterFirstName().getDescription();
             case ELEMENTAL, PLANT -> firstName = Name.randomMonosyllabicFirstName().getDescription();
-            case HUMANOID -> firstName = Name.randomFirstName().getDescription();
             default -> firstName = Name.randomFirstName().getDescription();
         }
         return firstName;
@@ -66,9 +65,8 @@ public class Creature extends Entity implements NPC {
         String surname;
         switch (this.genus) {
             case BEAST, MONSTROSITY -> surname = Name.randomGutturalSurname().getDescription();
-            case DRAGON -> surname = Name.randomSinisterSurname().getDescription();
+            case DRAGON, UNDEAD -> surname = Name.randomSinisterSurname().getDescription();
             case ELEMENTAL, PLANT -> surname = Name.randomMonosyllabicSurname().getDescription();
-            case HUMANOID -> surname = Name.randomSurname().getDescription();
             default -> surname = Name.randomSurname().getDescription();
         }
         return surname;
