@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "description": "Doomwhisper"
+  },
+  {
+    "id": 2,
+    "description": "Dreadfield"
+  },
+  {
+    "id": 3,
+    "description": "Gallows"
+  },
+  {
+    "id": 4,
+    "description": "Hellstryke"
+  },
+  {
+    "id": 5,
+    "description": "Killraven"
+  },
+  {
+    "id": 6,
+    "description": "Nightblade"
+  },
+  {
+    "id": 7,
+    "description": "Norixius"
+  },
+  {
+    "id": 8,
+    "description": "Shadowfang"
+  },
+  {
+    "id": 9,
+    "description": "Valtar"
+  },
+  {
+    "id": 10,
+    "description": "Winterspell"
+  },
+  {
+    "id": 11,
+    "description": "Xandros"
+  },
+  {
+    "id": 12,
+    "description": "Zarkynzorn"
+  }
+]

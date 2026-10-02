@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "description": "Arachne"
+  },
+  {
+    "id": 2,
+    "description": "Axyss"
+  },
+  {
+    "id": 3,
+    "description": "Carrion"
+  },
+  {
+    "id": 4,
+    "description": "Grinnus"
+  },
+  {
+    "id": 5,
+    "description": "Melkhis"
+  },
+  {
+    "id": 6,
+    "description": "Morthos"
+  },
+  {
+    "id": 7,
+    "description": "Nadir"
+  },
+  {
+    "id": 8,
+    "description": "Scandal"
+  },
+  {
+    "id": 9,
+    "description": "Skellendyre"
+  },
+  {
+    "id": 10,
+    "description": "Thaltus"
+  },
+  {
+    "id": 11,
+    "description": "Valkora"
+  },
+  {
+    "id": 12,
+    "description": "Vexander"
+  }
+]

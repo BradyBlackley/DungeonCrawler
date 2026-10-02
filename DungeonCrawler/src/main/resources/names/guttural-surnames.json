@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "description": "Burska"
+  },
+  {
+    "id": 2,
+    "description": "Gruuthok"
+  },
+  {
+    "id": 3,
+    "description": "Hrondl"
+  },
+  {
+    "id": 4,
+    "description": "Jarzzok"
+  },
+  {
+    "id": 5,
+    "description": "Kraltus"
+  },
+  {
+    "id": 6,
+    "description": "Shamog"
+  },
+  {
+    "id": 7,
+    "description": "Skrangval"
+  },
+  {
+    "id": 8,
+    "description": "Ungart"
+  },
+  {
+    "id": 9,
+    "description": "Uuthrakt"
+  },
+  {
+    "id": 10,
+    "description": "Vrakir"
+  },
+  {
+    "id": 11,
+    "description": "Yuldra"
+  },
+  {
+    "id": 12,
+    "description": "Zulrax"
+  }
+]

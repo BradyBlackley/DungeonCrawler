@@ -15,6 +15,10 @@ public class Name {
     private static final List<Feature> COMMON_SURNAMES;
     private static final List<Feature> MONOSYLLABIC_FIRST_NAMES;
     private static final List<Feature> MONOSYLLABIC_SURNAMES;
+    private static final List<Feature> GUTTURAL_FIRST_NAMES;
+    private static final List<Feature> GUTTURAL_SURNAMES;
+    private static final List<Feature> SINISTER_FIRST_NAMES;
+    private static final List<Feature> SINISTER_SURNAMES;
 
     static {
         try {
@@ -65,7 +69,7 @@ public class Name {
             );
 
         } catch (IOException e) {
-            throw new RuntimeException("Failed to load first names", e);
+            throw new RuntimeException("Failed to load monosyllabic first names", e);
         }
 
         try {
@@ -82,7 +86,75 @@ public class Name {
             );
 
         } catch (IOException e) {
-            throw new RuntimeException("Failed to load surnames", e);
+            throw new RuntimeException("Failed to load monosyllabic surnames", e);
+        }
+
+        try {
+            ObjectMapper mapper = new ObjectMapper();
+
+            InputStream in = Name.class.getResourceAsStream("/names/guttural-first-names.json");
+            if (in == null) {
+                throw new RuntimeException("Resource not found: /names/guttural-first-names.json");
+            }
+
+            GUTTURAL_FIRST_NAMES = mapper.readValue(
+                    in,
+                    new TypeReference<List<Feature>>() {}
+            );
+
+        } catch (IOException e) {
+            throw new RuntimeException("Failed to load guttural first names", e);
+        }
+
+        try {
+            ObjectMapper mapper = new ObjectMapper();
+
+            InputStream in = Name.class.getResourceAsStream("/names/guttural-surnames.json");
+            if (in == null) {
+                throw new RuntimeException("Resource not found: /names/guttural-surnames.json");
+            }
+
+            GUTTURAL_SURNAMES = mapper.readValue(
+                    in,
+                    new TypeReference<List<Feature>>() {}
+            );
+
+        } catch (IOException e) {
+            throw new RuntimeException("Failed to load guttural surnames", e);
+        }
+
+        try {
+            ObjectMapper mapper = new ObjectMapper();
+
+            InputStream in = Name.class.getResourceAsStream("/names/sinister-first-names.json");
+            if (in == null) {
+                throw new RuntimeException("Resource not found: /names/sinister-first-names.json");
+            }
+
+            SINISTER_FIRST_NAMES = mapper.readValue(
+                    in,
+                    new TypeReference<List<Feature>>() {}
+            );
+
+        } catch (IOException e) {
+            throw new RuntimeException("Failed to load sinister first names", e);
+        }
+
+        try {
+            ObjectMapper mapper = new ObjectMapper();
+
+            InputStream in = Name.class.getResourceAsStream("/names/sinister-surnames.json");
+            if (in == null) {
+                throw new RuntimeException("Resource not found: /names/sinister-surnames.json");
+            }
+
+            SINISTER_SURNAMES = mapper.readValue(
+                    in,
+                    new TypeReference<List<Feature>>() {}
+            );
+
+        } catch (IOException e) {
+            throw new RuntimeException("Failed to load sinister surnames", e);
         }
     }
 
@@ -100,5 +172,21 @@ public class Name {
 
     public static Feature randomMonosyllabicSurname() {
         return MONOSYLLABIC_SURNAMES.get(RAND.nextInt(MONOSYLLABIC_SURNAMES.size()));
+    }
+
+    public static Feature randomGutturalFirstName() {
+        return GUTTURAL_FIRST_NAMES.get(RAND.nextInt(GUTTURAL_FIRST_NAMES.size()));
+    }
+
+    public static Feature randomGutturalSurname() {
+        return GUTTURAL_SURNAMES.get(RAND.nextInt(GUTTURAL_SURNAMES.size()));
+    }
+
+    public static Feature randomSinisterFirstName() {
+        return SINISTER_FIRST_NAMES.get(RAND.nextInt(SINISTER_FIRST_NAMES.size()));
+    }
+
+    public static Feature randomSinisterSurname() {
+        return SINISTER_SURNAMES.get(RAND.nextInt(SINISTER_SURNAMES.size()));
     }
 }

@@ -3,7 +3,7 @@ package org.example;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.experimental.SuperBuilder;
 import org.example.enums.Alignment;
-import org.example.enums.CreatureType;
+import org.example.enums.CreatureGenus;
 import org.example.enums.Size;
 
 @SuperBuilder
@@ -12,7 +12,8 @@ public class Creature extends Entity implements NPC {
     String firstName;
     String surname;
     Size size;
-    CreatureType subtype;
+    String species;
+    CreatureGenus genus;
     Alignment alignment;
     StatBlock stats;
     double challenge;
@@ -29,7 +30,7 @@ public class Creature extends Entity implements NPC {
                 .append(", a ")
                 .append(size.getDescription())
                 .append(" ")
-                .append(subtype.getDescription())
+                .append(genus.getDescription())
                 .append(" ")
                 .append("with ")
                 .append(appearance.getDescription())
@@ -42,19 +43,19 @@ public class Creature extends Entity implements NPC {
     @Override
     public void generateAttributes() {
         this.size = Size.randomSize();
-        this.subtype = CreatureType.randomCreatureType();
+        this.genus = CreatureGenus.randomCreatureType();
         this.alignment = Alignment.randomAlignment();
         this.appearance = Appearance.randomAppearance();
         this.firstName = generateFirstNameByCreatureType();
-        this.surname = Name.randomSurname().getDescription();
+        this.surname = generateSurnameByCreatureType();
     }
 
     public String generateFirstNameByCreatureType() {
         String firstName;
-        switch (this.subtype) {
-            case BEAST -> firstName = Name.randomFirstName().getDescription();
-            case DRAGON, DRAGON_METALLIC, DRAGON_CHROMATIC -> firstName = Name.randomFirstName().getDescription();
-            case ELEMENTAL -> firstName = Name.randomMonosyllabicFirstName().getDescription();
+        switch (this.genus) {
+            case BEAST, MONSTROSITY -> firstName = Name.randomGutturalFirstName().getDescription();
+            case DRAGON -> firstName = Name.randomSinisterFirstName().getDescription();
+            case ELEMENTAL, PLANT -> firstName = Name.randomMonosyllabicFirstName().getDescription();
             case HUMANOID -> firstName = Name.randomFirstName().getDescription();
             default -> firstName = Name.randomFirstName().getDescription();
         }
@@ -62,14 +63,14 @@ public class Creature extends Entity implements NPC {
     }
 
     public String generateSurnameByCreatureType() {
-        String firstName;
-        switch (this.subtype) {
-            case BEAST -> firstName = Name.randomFirstName().getDescription();
-            case DRAGON, DRAGON_METALLIC, DRAGON_CHROMATIC -> firstName = Name.randomFirstName().getDescription();
-            case ELEMENTAL -> firstName = Name.randomMonosyllabicFirstName().getDescription();
-            case HUMANOID -> firstName = Name.randomFirstName().getDescription();
-            default -> firstName = Name.randomFirstName().getDescription();
+        String surname;
+        switch (this.genus) {
+            case BEAST, MONSTROSITY -> surname = Name.randomGutturalSurname().getDescription();
+            case DRAGON -> surname = Name.randomSinisterSurname().getDescription();
+            case ELEMENTAL, PLANT -> surname = Name.randomMonosyllabicSurname().getDescription();
+            case HUMANOID -> surname = Name.randomSurname().getDescription();
+            default -> surname = Name.randomSurname().getDescription();
         }
-        return firstName;
+        return surname;
     }
 }

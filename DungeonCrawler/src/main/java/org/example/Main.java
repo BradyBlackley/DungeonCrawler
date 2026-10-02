@@ -33,6 +33,7 @@ public class Main {
             System.out.println("Describing creatures:");
             System.out.println();
 
+
             synthesizer.speakPlainText("Describing creatures:", null);
             int loop = 0;
             while(loop < 5) {

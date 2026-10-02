@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "description": "Abzug"
+  },
+  {
+    "id": 2,
+    "description": "Bajok"
+  },
+  {
+    "id": 3,
+    "description": "Bharash"
+  },
+  {
+    "id": 4,
+    "description": "Grovis"
+  },
+  {
+    "id": 5,
+    "description": "Gruuna"
+  },
+  {
+    "id": 6,
+    "description": "Hokrun"
+  },
+  {
+    "id": 7,
+    "description": "Mardred"
+  },
+  {
+    "id": 8,
+    "description": "Rhogar"
+  },
+  {
+    "id": 9,
+    "description": "Skuldark"
+  },
+  {
+    "id": 10,
+    "description": "Thokk"
+  },
+  {
+    "id": 11,
+    "description": "Urzul"
+  },
+  {
+    "id": 12,
+    "description": "Varka"
+  }
+]
