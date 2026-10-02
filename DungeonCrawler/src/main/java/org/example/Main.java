@@ -27,9 +27,13 @@ public class Main {
 
             System.out.println("***************************");
             System.out.println("Welcome to Dungeon Crawler.");
+            synthesizer.speakPlainText("Welcome to Dungeon Crawler.", null);
             System.out.println();
 
             System.out.println("Describing creatures:");
+            System.out.println();
+
+            synthesizer.speakPlainText("Describing creatures:", null);
             int loop = 0;
             while(loop < 5) {
                 Creature creature = Creature.builder().build();
@@ -41,6 +45,8 @@ public class Main {
             }
 
             System.out.println();
+            System.out.println("Thank you for using Dungeon Crawler.");
+            synthesizer.speakPlainText("Thank you for using Dungeon Crawler.", null);
             System.out.println("***************************");
 
             synthesizer.waitEngineState(
