@@ -7,6 +7,36 @@
     "setting": "THE_FORGOTTEN_REALMS",
     "plane": "Material Plane",
     "planeCategory": "MATERIAL_REALMS",
-    "description": "A tiny cloister that is a haven where world-weary people come to seek peace, reconciliation, and enlightenment.\nA long path leads from the rocky shore up the side of the cliff, with occasional stairs to ease the ascent.\nHere and there along the lower part of the path, well-tended garden plots hold flowers, herbs, and vegetables.\nAbout thirty feet above the bay, the path widens into a long plaza.\nHalfway along the plaza, a stone statue of a dragon gazes serenely down the path.\nSix open doorways are cut into the cliff side.\nA small, free-standing winch house halfway up the path has a peaked roof and a weathered wooden door.\nA sturdy wooden pallet wrapped with rope hangs beneath the building on an iron chain, lying flat against the cliff face."
+    "description": "Dragon's Rest is a tiny cloister that is a haven where world-weary people come to seek peace, reconciliation, and enlightenment.\nA long path leads from the rocky shore up the side of the cliff, with occasional stairs to ease the ascent."
+  },
+  {
+    "id": 2,
+    "name": "Seagrow Caves",
+    "region": "Stormwreck Isle",
+    "world": "TORIL",
+    "setting": "THE_FORGOTTEN_REALMS",
+    "plane": "Material Plane",
+    "planeCategory": "MATERIAL_REALMS",
+    "description": "Seagrow Caves is a coastal cavern that contains multicolored fungus that covers the walls of its tunnels.\nA bioluminescent glow fills the cavern with dim light.\nThe surface of the water swirls with colorful, faintly glowing spores reacting to the movement of something beneath the surface."
+  },
+  {
+    "id": 3,
+    "name": "The Wreck of Compass Rose",
+    "region": "Stormwreck Isle",
+    "world": "TORIL",
+    "setting": "THE_FORGOTTEN_REALMS",
+    "plane": "Material Plane",
+    "planeCategory": "MATERIAL_REALMS",
+    "description": "The Wreck of Compass Rose is a derelict ship lodged against a ridge of rocks and enormous dragon bones.\nThe moldering wood of the deck is slick with algae and seawater.\nAmid the tangle of rigging, splintered railings, and stray seaweed, you spot boots, bones, and bits of gore that seem considerably more recent than the wreck itself.\nStairs lead to the upper decks at the fore and aft, and doors open into cabins beneath those decks."
+  },
+  {
+    "id": 4,
+    "name": "Clifftop Observatory",
+    "region": "Stormwreck Isle",
+    "world": "TORIL",
+    "setting": "THE_FORGOTTEN_REALMS",
+    "plane": "Material Plane",
+    "planeCategory": "MATERIAL_REALMS",
+    "description": "The Clifftop Observatory was once a marvel of magical innovation.\nAdorned with gorgeous stained glass windows and marble spires, the observatory's towers stood high above the churning sea on separate islets, linked by shimmering bridges of magical energy.\nBut now it lies in ruin, a crumbled memory overtaken by nature."
   }
 ]

@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "description": "[character1] has a dark secret that, if [character2] knew about it, weapons would be drawn. [character1.secret]"
+  },
+  {
+    "id": 2,
+    "description": "[character1] is oath-bound to uphold the law, but they saw [character2] slipping poison into a nearby barrel of ale."
+  },
+  {
+    "id": 3,
+    "description": "[character1] is madly in love with [character2], but has discovered their secret: [character2.secret]"
+  }
+]

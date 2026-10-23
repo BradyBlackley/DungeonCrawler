@@ -22,7 +22,6 @@ public class Main {
                     new SynthesizerModeDesc(Locale.US));
 
             synthesizer.allocate();
-
             synthesizer.resume();
 
             System.out.println("***************************");

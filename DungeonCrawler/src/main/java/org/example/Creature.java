@@ -18,6 +18,7 @@ public class Creature extends Entity implements NPC {
     StatBlock stats;
     double challenge;
     Feature appearance;
+    Secret secret;
 
     ObjectMapper mapper;
 
@@ -48,6 +49,7 @@ public class Creature extends Entity implements NPC {
         this.appearance = Appearance.randomAppearance();
         this.firstName = generateFirstNameByCreatureType();
         this.surname = generateSurnameByCreatureType();
+        this.secret = generateSecretWithNames();
     }
 
     public String generateFirstNameByCreatureType() {
@@ -70,5 +72,15 @@ public class Creature extends Entity implements NPC {
             default -> surname = NameGenerator.randomSurname().getDescription();
         }
         return surname;
+    }
+
+    public Secret generateSecretWithNames() {
+        Secret secret1 = SecretGenerator.randomSecret();
+        String temp = secret1.getDescription();
+
+        temp = temp.replace("[character]", firstName);
+        secret1.setDescription(temp);
+
+        return secret1;
     }
 }

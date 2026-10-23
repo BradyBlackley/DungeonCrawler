@@ -17,7 +17,7 @@ public class Appearance {
         try {
             ObjectMapper mapper = new ObjectMapper();
 
-            InputStream in = Appearance.class.getResourceAsStream("/appearance/features.json");
+            InputStream in = Appearance.class.getResourceAsStream("/appearances/features.json");
             if (in == null) {
                 throw new RuntimeException("Resource not found: /appearance/features.json");
             }
