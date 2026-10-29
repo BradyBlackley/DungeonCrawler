@@ -1,11 +1,15 @@
 package org.example;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
-import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 @Data
-@Getter
+@Builder(toBuilder = true)
+@NoArgsConstructor
+@AllArgsConstructor
 public class Dilemma {
-    int id;
-    String description;
+    private int id;
+    private String description;
 }

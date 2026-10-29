@@ -7,7 +7,7 @@
     "setting": "THE_FORGOTTEN_REALMS",
     "plane": "Material Plane",
     "planeCategory": "MATERIAL_REALMS",
-    "description": "Dragon's Rest is a tiny cloister that is a haven where world-weary people come to seek peace, reconciliation, and enlightenment.\nA long path leads from the rocky shore up the side of the cliff, with occasional stairs to ease the ascent."
+    "description": "Dragon's Rest is a tiny cloister that is a haven where world-weary people come to seek peace, reconciliation, and enlightenment. A long path leads from the rocky shore up the side of the cliff, with occasional stairs to ease the ascent."
   },
   {
     "id": 2,
@@ -17,7 +17,7 @@
     "setting": "THE_FORGOTTEN_REALMS",
     "plane": "Material Plane",
     "planeCategory": "MATERIAL_REALMS",
-    "description": "Seagrow Caves is a coastal cavern that contains multicolored fungus that covers the walls of its tunnels.\nA bioluminescent glow fills the cavern with dim light.\nThe surface of the water swirls with colorful, faintly glowing spores reacting to the movement of something beneath the surface."
+    "description": "Seagrow Caves is a coastal cavern that contains multicolored fungus that covers the walls of its tunnels. A bioluminescent glow fills the cavern with dim light. The surface of the water swirls with colorful, faintly glowing spores reacting to the movement of something beneath the surface."
   },
   {
     "id": 3,
@@ -27,7 +27,7 @@
     "setting": "THE_FORGOTTEN_REALMS",
     "plane": "Material Plane",
     "planeCategory": "MATERIAL_REALMS",
-    "description": "The Wreck of Compass Rose is a derelict ship lodged against a ridge of rocks and enormous dragon bones.\nThe moldering wood of the deck is slick with algae and seawater.\nAmid the tangle of rigging, splintered railings, and stray seaweed, you spot boots, bones, and bits of gore that seem considerably more recent than the wreck itself.\nStairs lead to the upper decks at the fore and aft, and doors open into cabins beneath those decks."
+    "description": "The Wreck of Compass Rose is a derelict ship lodged against a ridge of rocks and enormous dragon bones. The moldering wood of the deck is slick with algae and seawater. Amid the tangle of rigging, splintered railings, and stray seaweed, you spot boots, bones, and bits of gore that seem considerably more recent than the wreck itself. Stairs lead to the upper decks at the fore and aft, and doors open into cabins beneath those decks."
   },
   {
     "id": 4,
@@ -37,6 +37,6 @@
     "setting": "THE_FORGOTTEN_REALMS",
     "plane": "Material Plane",
     "planeCategory": "MATERIAL_REALMS",
-    "description": "The Clifftop Observatory was once a marvel of magical innovation.\nAdorned with gorgeous stained glass windows and marble spires, the observatory's towers stood high above the churning sea on separate islets, linked by shimmering bridges of magical energy.\nBut now it lies in ruin, a crumbled memory overtaken by nature."
+    "description": "The Clifftop Observatory was once a marvel of magical innovation. Adorned with gorgeous stained glass windows and marble spires, the observatory's towers stood high above the churning sea on separate islets, linked by shimmering bridges of magical energy. But now it lies in ruin, a crumbled memory overtaken by nature."
   }
 ]

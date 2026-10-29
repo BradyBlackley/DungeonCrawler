@@ -13,7 +13,7 @@ public enum CreatureGenus {
     BEAST("beast"),
     DRAGON("dragon"),
     ELEMENTAL("elemental"),
-    HUMANOID("humanoid"),
+    HUMAN("human"),
     MONSTROSITY("monstrosity"),
     PLANT("plant"),
     UNDEAD("undead");

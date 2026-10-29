@@ -75,12 +75,16 @@ public class Creature extends Entity implements NPC {
     }
 
     public Secret generateSecretWithNames() {
-        Secret secret1 = SecretGenerator.randomSecret();
-        String temp = secret1.getDescription();
+        Secret template = SecretGenerator.randomSecret();
 
-        temp = temp.replace("[character]", firstName);
-        secret1.setDescription(temp);
+        Secret secret = Secret.builder().build();
+        secret.setId(template.getId());
 
-        return secret1;
+        secret.setDescription(
+                template.getDescription()
+                        .replace("[character]", firstName)
+        );
+
+        return secret;
     }
 }

@@ -33,6 +33,19 @@ public class LocationGenerator {
     }
 
     public static Location randomLocation() {
-        return LOCATIONS.get(RAND.nextInt(LOCATIONS.size()));
+        Location template = LOCATIONS.get(
+                RAND.nextInt(LOCATIONS.size())
+        );
+
+        return Location.builder()
+                .id(template.getId())
+                .name(template.getName())
+                .region(template.getRegion())
+                .world(template.getWorld())
+                .setting(template.getSetting())
+                .plane(template.getPlane())
+                .planeCategory(template.getPlaneCategory())
+                .description(template.getDescription())
+                .build();
     }
 }

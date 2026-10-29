@@ -16,62 +16,57 @@ public class Scenario extends Entity {
 
     public void generateAttributes() {
         this.location = LocationGenerator.randomLocation();
-        System.out.println("Describing location: ");
-        System.out.println();
-        System.out.println(location.getDescription());
-        System.out.println();
         this.creatures = generateRandomCreatures();
         this.dilemma = generateDilemmaWithCreatures();
     }
 
     public String describe() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Describing location: ")
+        sb.append("Location: \n")
                 .append(location.getDescription())
-                .append("Describing creatures: ");
+                .append("\n")
+                .append("\n")
+                .append("Creatures: \n");
         for (Creature creature : creatures) {
             sb.append(creature.describe()).append("\n");
         }
-        sb.append("Describing dilemma: ");
+        sb.append("\n");
+        sb.append("Dilemma: \n");
         sb.append(dilemma.getDescription());
         return sb.toString();
     }
 
     private List<Creature> generateRandomCreatures() {
-        System.out.println("Describing creatures:");
-        System.out.println();
+        List<Creature> creatures = new ArrayList<>();
 
-        int loop = 0;
-        List<Creature> retVal = new ArrayList<>(List.of());
-        while(loop < RAND.nextInt(2, 6)) {
+        int numberOfCreatures = RAND.nextInt(2, 6);
+
+        for (int i = 0; i < numberOfCreatures; i++) {
             Creature creature = Creature.builder().build();
             creature.generateAttributes();
-            System.out.println(creature.describe());
-            retVal.add(creature);
-            loop++;
+            creatures.add(creature);
         }
 
-        System.out.println();
-        return retVal;
+        return creatures;
     }
 
     private Dilemma generateDilemmaWithCreatures() {
-        Dilemma dilemma1 = DilemmaGenerator.randomDilemma();
 
-        String temp = dilemma1.getDescription();
+        Dilemma template = DilemmaGenerator.randomDilemma();
 
-        temp = temp
-                .replace("[character1]", creatures.get(0).firstName)
-                .replace("[character2]", creatures.get(1).firstName)
-                .replace("[character1.secret]", creatures.get(0).secret.getDescription())
-                .replace("[character2.secret]", creatures.get(1).secret.getDescription());
+        Dilemma dilemma = Dilemma.builder().build();
 
-        dilemma1.setDescription(temp);
+        dilemma.setId(template.getId());
 
-        System.out.println("Describing dilemma:");
-        System.out.println();
-        System.out.println(dilemma1.getDescription());
-        return dilemma1;
+        dilemma.setDescription(
+                template.getDescription()
+                        .replace("[character1]", creatures.get(0).firstName)
+                        .replace("[character2]", creatures.get(1).firstName)
+                        .replace("[character1.secret]", creatures.get(0).secret.getDescription())
+                        .replace("[character2.secret]", creatures.get(1).secret.getDescription())
+        );
+
+        return dilemma;
     }
 
 }
